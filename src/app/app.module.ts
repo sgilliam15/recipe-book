@@ -8,11 +8,13 @@ import { HeaderComponent } from './header.component';
 
 // Custom Modules
 import { RecipesModule } from './recipes/recipes.module';
+import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    ShoppingListComponent
   ],
   imports: [
     BrowserModule,
