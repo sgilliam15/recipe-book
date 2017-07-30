@@ -5,18 +5,20 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header.component';
-import { RecipesComponent } from './recipes/recipes.component';
+
+// Custom Modules
+import { RecipesModule } from './recipes/recipes.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    RecipesComponent
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RecipesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
