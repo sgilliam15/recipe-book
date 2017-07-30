@@ -4,23 +4,23 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header.component';
 
 // Custom Modules
 import { RecipesModule } from './recipes/recipes.module';
-import { ShoppingListComponent } from './shopping-list/shopping-list.component';
+import { ShoppingListModule } from './shopping-list/shopping-list.module';
+import { SharedModule } from './shared/shared/shared.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    ShoppingListComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RecipesModule
+    RecipesModule,
+    ShoppingListModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
