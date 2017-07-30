@@ -5,6 +5,11 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+// Custom Modules
+import { RecipesModule } from './recipes/recipes.module';
+import { ShoppingListModule } from './shopping-list/shopping-list.module';
+import { SharedModule } from './shared/shared/shared.module';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -12,7 +17,10 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RecipesModule,
+    ShoppingListModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
