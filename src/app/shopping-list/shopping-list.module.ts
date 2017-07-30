@@ -14,6 +14,9 @@ import { ShoppingListAddComponent } from './shopping-list-add/shopping-list-add.
   declarations: [
     ShoppingListComponent,
     ShoppingListAddComponent
+  ],
+  exports: [
+    ShoppingListComponent
   ]
 })
 export class ShoppingListModule { }
