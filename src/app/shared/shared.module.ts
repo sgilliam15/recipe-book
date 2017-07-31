@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 
 // Components
 import { HeaderComponent } from './header/header.component';
+import { DropdownDirective } from './directives/dropdown.directive';
 
 @NgModule({
   imports: [
     CommonModule
   ],
   declarations: [
-    HeaderComponent
+    HeaderComponent,
+    DropdownDirective
   ],
   exports: [
     HeaderComponent
