@@ -8,20 +8,17 @@ import { Recipe } from '../models/recipe';
   templateUrl: './recipe-list.component.html',
 })
 export class RecipeListComponent implements OnInit {
-  recipes: Recipe[] = [];
+  recipes: Recipe[] = [
+    new Recipe('Schnitzel', 'Very tasty', 'http://images.derberater.de/files/imagecache/456xXXX_berater/berater/slides/WienerSchnitzel.jpg', []),
+    new Recipe('Summer Salad', 'Okayish', 'http://ohmyveggies.com/wp-content/uploads/2013/06/the_perfect_summer_salad.jpg', [])
+  ];
 
   @Output()
   recipeSelected = new EventEmitter<Recipe>();
 
-  recipe = new Recipe();
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-    this.recipe.name = 'Dummy';
-    this.recipe.description = 'Dummy';
-    this.recipe.imagePath = 'http://www.seriouseats.com/images/2015/09/20150914-pressure-cooker-recipes-roundup-09.jpg';
-  }
+  ngOnInit() {}
 
   onSelected(recipe: Recipe) {
     this.recipeSelected.emit(recipe);
