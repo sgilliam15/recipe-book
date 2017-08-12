@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Recipe } from './models/recipe';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'rb-recipes',

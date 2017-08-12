@@ -12,9 +12,12 @@ import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 import { RecipeStartComponent } from './recipe-start/recipe-start.component';
 import { RecipeEditComponent } from './recipe-edit/recipe-edit.component';
 
-
 const recipeRoutes: Routes = [
-  {
+    {
+        path: 'recipes',
+        component: RecipesComponent,
+        children: [
+    {
     path: '',
     component: RecipeStartComponent
   },
@@ -24,7 +27,7 @@ const recipeRoutes: Routes = [
   },
   {
     path: ':id',
-    component: RecipeEditComponent
+    component: RecipeDetailComponent
   },
   {
     path: ':id/edit',
@@ -34,13 +37,14 @@ const recipeRoutes: Routes = [
   path: '**',
   component: RecipeStartComponent
   }
+        ]
+    }
 ];
-
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(recipeRoutes)
+    RouterModule.forChild(recipeRoutes),
   ],
   declarations: [
     RecipesComponent,
