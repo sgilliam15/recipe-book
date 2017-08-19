@@ -8,6 +8,7 @@ import { RecipesComponent } from './recipes.component';
 import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { RecipeItemComponent } from './recipe-list/recipe-item.component';
 import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
+import { RecipesService } from './services/recipes.service';
 
 
 @NgModule({
@@ -22,6 +23,9 @@ import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
   ],
   exports: [
     RecipesComponent
+  ],
+  providers: [
+    RecipesService
   ]
 })
 

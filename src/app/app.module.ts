@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { RecipesModule } from './recipes/recipes.module';
 import { ShoppingListModule } from './shopping-list/shopping-list.module';
 import { SharedModule } from './shared/shared.module';
+import { ShoppingListService } from './shopping-list/services/shopping-list.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { SharedModule } from './shared/shared.module';
     ShoppingListModule,
     SharedModule
   ],
-  providers: [],
+  providers: [ ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
