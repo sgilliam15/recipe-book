@@ -8,6 +8,9 @@ import { ShoppingListService } from '../../shopping-list/services/shopping-list.
 import { RecipesService } from '../services/recipes.service';
 import { RecipesShoppinglistSharedServiceService } from '../../shared/services/recipes-shoppinglist-shared-service.service';
 
+// Services
+import { ShoppingListService } from '../../shopping-list/services/shopping-list.service';
+
 @Component({
   selector: 'rb-recipe-detail',
   templateUrl: './recipe-detail.component.html',
