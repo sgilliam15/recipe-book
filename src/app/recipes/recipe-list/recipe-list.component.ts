@@ -9,18 +9,17 @@ import { Recipe } from '../models/recipe';
 })
 export class RecipeListComponent implements OnInit {
   recipes: Recipe[] = [
-    new Recipe('Schnitzel', 'Very tasty', 'http://images.derberater.de/files/imagecache/456xXXX_berater/berater/slides/WienerSchnitzel.jpg', []),
-    new Recipe('Summer Salad', 'Okayish', 'http://ohmyveggies.com/wp-content/uploads/2013/06/the_perfect_summer_salad.jpg', [])
+    new Recipe(0, 'Schnitzel', 'Very tasty', 'https://www.daringgourmet.com/wp-content/uploads/2014/03/Schnitzel-7_edited.jpg', []),
+    new Recipe(1, 'Summer Salad', 'Okayish', 'http://ohmyveggies.com/wp-content/uploads/2013/06/the_perfect_summer_salad.jpg', [])
   ];
 
   @Output()
   recipeSelected = new EventEmitter<Recipe>();
 
-  constructor() {}
-
   ngOnInit() {}
 
   onSelected(recipe: Recipe) {
     this.recipeSelected.emit(recipe);
+    console.log(recipe);
   }
 }

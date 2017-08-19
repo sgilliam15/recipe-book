@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, RouterLink } from '@angular/router';
+import { BrowserModule } from '@angular/platform-browser';
 
 // Containers
 import { RecipesComponent } from './recipes.component';
@@ -13,38 +14,34 @@ import { RecipeStartComponent } from './recipe-start/recipe-start.component';
 import { RecipeEditComponent } from './recipe-edit/recipe-edit.component';
 
 const recipeRoutes: Routes = [
+  {
+    path: 'recipes',
+    component: RecipesComponent,
+    children: [
     {
-        path: 'recipes',
-        component: RecipesComponent,
-        children: [
+      path: '',
+      component: RecipeStartComponent
+    },
     {
-    path: '',
-    component: RecipeStartComponent
-  },
-  {
-    path: 'new',
-    component: RecipeEditComponent
-  },
-  {
-    path: ':id',
-    component: RecipeDetailComponent
-  },
-  {
-    path: ':id/edit',
-    component: RecipeEditComponent
-  },
-  {
-  path: '**',
-  component: RecipeStartComponent
-  }
-        ]
+      path: 'new',
+      component: RecipeEditComponent
+    },
+    {
+      path: ':id',
+      component: RecipeDetailComponent
+    },
+    {
+      path: ':id/edit',
+      component: RecipeEditComponent
     }
+  ]}
 ];
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(recipeRoutes),
+    BrowserModule,
+    RouterModule.forChild(recipeRoutes)
   ],
   declarations: [
     RecipesComponent,
