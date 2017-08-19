@@ -7,6 +7,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HeaderComponent } from './header/header.component';
 import { DropdownDirective } from './directives/dropdown.directive';
 
+// Services
+import { RecipesShoppinglistSharedServiceService } from './services/recipes-shoppinglist-shared-service.service';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -19,6 +22,9 @@ import { DropdownDirective } from './directives/dropdown.directive';
   ],
   exports: [
     HeaderComponent
+  ],
+  providers: [
+    RecipesShoppinglistSharedServiceService
   ]
 })
 export class SharedModule { }
