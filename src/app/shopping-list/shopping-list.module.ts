@@ -7,6 +7,9 @@ import { ShoppingListComponent } from './containers/shopping-list/shopping-list.
 // Components
 import { ShoppingListAddComponent } from './components/shopping-list-add/shopping-list-add.component';
 
+// Services
+import { ShoppingListService } from './services/shopping-list.service';
+
 
 @NgModule({
   imports: [
@@ -18,6 +21,9 @@ import { ShoppingListAddComponent } from './components/shopping-list-add/shoppin
   ],
   exports: [
     ShoppingListComponent
+  ],
+  providers: [
+    ShoppingListService
   ]
 })
 

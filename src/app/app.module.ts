@@ -2,14 +2,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
+import { Router, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
+import { CommonModule } from '@angular/common';
 
 // Custom Modules
 import { RecipesModule } from './recipes/recipes.module';
 import { ShoppingListModule } from './shopping-list/shopping-list.module';
 import { SharedModule } from './shared/shared.module';
-import { ShoppingListService } from './shopping-list/services/shopping-list.service';
+import { AppRoutingModule } from './app-routing.module';
+
 
 @NgModule({
   declarations: [
@@ -17,13 +19,14 @@ import { ShoppingListService } from './shopping-list/services/shopping-list.serv
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     FormsModule,
     HttpModule,
     RecipesModule,
     ShoppingListModule,
-    SharedModule
+    SharedModule,
+    AppRoutingModule
   ],
-  providers: [ ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
