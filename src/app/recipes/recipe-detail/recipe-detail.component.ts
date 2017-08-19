@@ -4,7 +4,6 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs/Rx';
 
 // Services
-import { ShoppingListService } from '../../shopping-list/services/shopping-list.service';
 import { RecipesService } from '../services/recipes.service';
 import { RecipesShoppinglistSharedServiceService } from '../../shared/services/recipes-shoppinglist-shared-service.service';
 
